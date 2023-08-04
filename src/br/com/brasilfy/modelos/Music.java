@@ -30,4 +30,17 @@ public class Music extends Audio {
         this.author = author;
     }
 
+    public void setTotalLikes(int i) {
+    }
+
+    @Override
+    public int getClassification() {
+        if (getTotalReproduction() >= 2000){
+            return 10;
+        } else if (getTotalReproduction() >= 1000) {
+            return 8;
+        } else {
+            return 5;
+        }
+    }
 }
